@@ -1,0 +1,194 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+/* h1 -> h1 tag i.e. <h1>
+#h1 -> id i.e. <h1 id="h1">
+.h1 -> class i.e. <h1 class="h1"> */
+#test{
+    background-color: red;  
+    min-height: 100px;
+    max-height: 500px;
+    height: 20px;
+    padding: 20px;
+    margin: 20px;
+    border: 3px solid black;
+    border-radius: 50px;
+}
+#abc{
+    margin-top: 20px;
+    font-family: serif;
+    font-weight: 500;
+    font-size: 4vw;
+    text-transform: capitalize;
+    text-decoration: overline;
+}
+h2{
+    line-height: 2;
+    font-weight: 100;
+    text-align: right;
+}
+#first{
+    padding: 20px;
+    display: inline;
+    height: 50px;
+    width: 50px;
+    background: yellowgreen;
+}
+/* paragraph ke elements by default upar neeche hote h */
+hr{
+    margin: 20px;
+
+}
+a{
+    display: block;
+}
+/* anchor tag ke elements by default side by side hote hai. */
+#car1{
+    width: 100px;
+    height: 140px;
+    background-color: blue;
+}
+#car2{
+    position: absolute;
+    left: 50%;
+    top : 80%;
+    width: 80px;
+    height: 120px;
+    background-color: rgb(0, 255, 68);
+}
+#car3{
+    width: 110px;
+    height: 90px;
+    background-color: rgb(255, 0, 157);
+}
+#box{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+}
+#cube{
+    position: absolute;
+    /* relative use kiya hai jisse box ke andar he rahe cube */
+    left: 25%;
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+    /* fixed is used to fix a box in a page even if it has a scroll bar. */
+}
+#box2{
+    width: 500px;
+    height: 500px;
+    background: url(https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE=);
+    background-size: cover;
+    background-position: center;
+}
+#box2{
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to right bottom,red,yellow)
+}
+#box4{
+    display: flex;
+    /* there are two types of axes - main axis(Justify content is used) and cross axis(Align items is used)*/
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    background-color: blueviolet;
+}
+#one{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(226, 217, 43);
+}
+#two{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(226, 125, 43);
+}
+#three{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(226, 43, 128);
+}
+#second{
+    position: relative;
+    width: fit-content;
+}
+/* pseudo-elements */
+#second::before{
+    position: absolute;
+    top: 50%;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: aquamarine;
+}
+#second::first-letter{
+    font-size: 20px;
+}
+#second::selection{
+    color: green;
+}
+/* pseudo-classes */
+#second:hover{
+color: red;
+}
+button:active{
+    background-color: red;
+}
+input:focus{
+    background-color: red;
+}
+.ex:nth-child(2n){
+    color: red;
+}
+/* CSS grid */
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: skyblue;
+    /* display: flex; this is a single dimensional property. You can either work on main axis or cross axis. */ 
+
+    /* display: grid; is better than flex because it is two dimensional property. */
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; */
+
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    /* align-items and justify-items works inside the block. */
+    align-items: center;
+    justify-items: center;
+    /* align-content or justify-content works on all the items alltogether. It takes screen as the reference. */
+}
+.elem{
+    height: 50px;
+    width: 50px;
+    background-color: crimson;
+    border: 3px solid black;
+}
+#nav{
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: 60% 10% 10% 10% 10%;
+    grid-template-rows: 50px;
+    align-items: center;
+    justify-items: center;
+    /* When you want to give any property from parent to child then justify-item is used. */
+    padding: 0 20px;
+}
+#nav h1{
+    justify-self: start;
+    /* when you want to give any property from child to child then justify-self: is used. */
+}

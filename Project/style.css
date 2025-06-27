@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Gilroy;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: #d9d7d7;
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    grid-template-rows: 27% 55% 18%;
+}
+#left-top-left{
+    /* background-color: aqua; */
+    padding: 40px;
+}
+#square{
+    background-color: black;
+    height: 20px;
+    width: 20px;
+    rotate: 45deg;
+}
+
+
+#left-top-right{
+    /* background-color: rgb(141, 201, 29); */
+    padding-top: 40px;
+    padding-bottom: 50px;
+    text-align: right;
+}
+#left-top-right h4{
+    margin-bottom: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#left-top-right h5{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+#left-top-right h6{
+    display: none;
+}
+
+
+#left-center{
+    /* background-color: rgb(255, 0, 212); */
+    grid-column: 1 / 3;
+    padding: 40px;
+}
+#left-center h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    line-height: 6.5vw;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#left-center h1:nth-child(2n){
+    text-align: center;
+    
+}
+
+
+#left-bottom{
+    /* background-color: rgb(227, 227, 6); */
+    grid-column: 1 / 3;
+}
+#left-bottom p{
+    padding: 40px;
+    width: 55%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: #666;
+}
+
+
+#right{
+    /* background-color: blue; */
+    grid-column: 3;
+    grid-row: 1 / 4;
+    /* Through this you can specify the positioning of a specific box. */
+    padding: 40px;
+    padding-right: 120px;
+}
+#right video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+
+#arrow{
+    position: absolute;
+    top: 50%;
+    left: 52.7%;
+    background-color: rgb(243, 82, 23);
+    transform: translate(-50%, -50%) ;
+    /* aligns the center of element with the parent. */
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+#arrow i{
+    font-size: 30px;
+    font-weight: 100;
+}
+
+@media (max-width:600px) {
+    #main{
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 55px 35% 8%;
+    }
+
+    #left-top-left{
+    padding: 20px;
+    }
+#square{
+    height: 15px;
+    width: 15px;
+    }
+
+
+#left-top-right{
+    padding-top: 20px;
+    text-align: right;
+    }
+#left-top-right h4{
+    display: none;
+    }
+#left-top-right h5{
+    display: none;
+    }
+#left-top-right h6{
+    display: initial;
+    font-size: 20px;
+    padding-right: 15px;
+    }
+
+
+#left-center{
+    padding: 5px 20px;
+    }
+#left-center h1{
+    font-size: 14vw;
+    line-height: 12vw;
+    }
+#left-center h1:nth-child(2n){
+    text-align: right;
+    }
+
+
+#left-bottom{
+    padding: 5px 0px;
+    }
+#left-bottom p{
+    padding: 10px;
+    width: 90%;
+    font-size: 12px;
+    }
+
+
+#right video{
+    height: 45vh;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+    }
+
+
+#arrow{
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    }
+#arrow i{
+    font-size: 25px;
+    }
+#right{
+    grid-column: 1 / 4;
+    grid-row: 4;
+    padding: 20px;
+    }
+}
