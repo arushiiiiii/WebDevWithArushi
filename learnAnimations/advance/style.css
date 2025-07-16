@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+img{
+    height: 400px;
+    position: absolute;
+    animation-name: anime;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+
+@keyframes anime {
+    /* from{
+        left: 0;
+        top: 0;
+    }
+    to{
+        left: 80%;
+        top: 50%;
+    } */
+     /* if we want that the animation does not directly go to the desired place, instead move in a specific manner then from and to is not used. */
+
+     0%{
+        left: 0;
+        top: 0;
+        rotate: 0deg;
+     }
+     50%{
+        left: 80%;
+        top: 0;
+        rotate: 0deg;
+     }
+     100%{
+        left: 80%;
+        top: 50%;
+        rotate: 360deg;
+     }
+}

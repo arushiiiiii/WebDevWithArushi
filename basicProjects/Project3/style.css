@@ -1,0 +1,208 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: work sans;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+}
+#nav{
+    height: 80px;
+    width: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+#nav-part1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+.circle{
+    height: 15px;
+    width: 15px;
+    background-color: black;
+    border-radius: 50%;
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+#nav-part2 h4{
+    font-size: 12px;
+    font-weight: 550;
+}
+#nav-part2 h4 span{
+    color: rgb(103, 103, 109);
+    margin-left: 15px;
+}
+#nav-part2 i{
+    display: none;
+}
+
+#nav2{
+    /* background-color: blanchedalmond; */
+    display: flex;
+    gap: 60px;
+    font-size: 12.5px;
+    padding: 0 30px;
+    height: 20px;
+    align-items: center;
+}
+#nav2 h3{
+    font-weight: 550;
+}
+
+#content {
+    height: calc(100% - 100px);
+    /* background-color: aqua; */
+}
+#text-content{
+    height: 45%;
+    width: 100%;
+    /* background-color: rgb(185, 144, 222); */
+    display: flex;
+    flex-wrap: nowrap;  /* agar hum screen compress krenge, toh elements chote nhi hone balki agli line mein aane lgenge */
+    overflow-x: auto;  /* this is used to get the scroll bar on the desired element. */
+}
+#text-content::-webkit-scrollbar{
+    /* display: none;   Used to hide the scrollbar  */
+    background-color: transparent;
+    height: 4px;
+}
+#text-content::-webkit-scrollbar-thumb{
+    /* the part of the scrollbar jise pakad ke hum scroll krte hai. */
+    background-color: orangered;
+}
+.elem{
+    flex-shrink: 0;
+    height: 100%;
+    width: 65%;
+    /* background: #9a999c; */
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.elem h1{
+    font-size: 8vw;
+    font-weight: 350;
+}
+
+#image-content{
+    display: flex;
+    height: 55%;
+    width: 100%;
+    overflow-x: auto;    /* Taaki poora page na scroll kre, sirf desired box kre */
+}
+#image-content::-webkit-scrollbar{
+    display: none;
+}
+#image-content img{
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#pos{
+    object-position: center 30%;
+}
+
+
+@media (max-width: 600px) {
+    #nav{
+    height: 50px;
+    /* background-color: aquamarine; */
+    padding: 0 15px;
+}
+#nav-part1{
+    gap: 1px;
+}
+.circle{
+    height: 12px;
+    width: 12px;
+}
+#nav-part2{
+    gap: 30px;
+}
+#nav-part2 h4{
+    display: none;
+    font-size: 11px;
+}
+#nav-part2 h4:nth-child(1){
+    display: initial;
+}
+#nav-part2 h4 span{
+    margin-left: 9px;
+}
+#nav-part2 i{
+    display: initial;
+    font-size: 17px;
+}
+
+#nav2{
+    /* background-color: blanchedalmond; */
+    display: flex;
+    justify-content: space-between;
+    gap: 0px;
+    font-size: 2vw;
+    padding: 0 15px;
+    height: 20px;
+    align-items: center;
+}
+#nav2 h3{
+    font-weight: 550;
+}
+
+#content {
+    height: calc(100% - 70px);
+}
+#text-content{
+    height: 45%;
+}
+.elem{
+    flex-shrink: 0;
+    height: 100%;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+}
+.elem h1{
+    font-size: 15vw;
+    font-weight: 350;
+    /* white-space: nowrap; chahe koi bhi condition ho words same line mein rehte hai */
+}
+
+#image-content{
+    display: flex;
+    height: 55%;
+    width: 100%;
+    overflow-x: auto;    /* Taaki poora page na scroll kre, sirf desired box kre */
+}
+#image-content::-webkit-scrollbar{
+    display: none;
+}
+#image-content img{
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#pos{
+    object-position: center 30%;
+}
+}

@@ -1,0 +1,349 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display';
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: #F8F7F4;
+}
+#page1{
+    height: 100%;
+    width: 100%;
+    /* background-color: rgb(230, 123, 123); */
+}
+#nav{
+    height: 7vw;
+    width: 100%;
+    /* background-color: rgb(112, 112, 228); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vw;
+}
+#nav-part1{
+    width: 35%;
+    /* background-color: blanchedalmond; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#nav-part1 h4{
+    font-size: 0.9vw;
+    font-weight: 500;
+}
+#nav-part2{
+    width: 35%;
+    /* background-color: blanchedalmond; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#nav-part2 button{
+    padding: 0.5vw 1vw;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9vw;
+    border: none;
+    background-color: black;
+    color: white;
+    margin: 0 0.7vw;
+}
+#nav-part2 button:nth-child(1){
+    background-color: transparent;
+    color: black;
+}
+#nav img{
+    height: 100%;
+}
+
+#content{
+    height: calc(100% - 7vw);
+    width: 100%;
+    /* background-color: rgb(170, 125, 213); */
+    padding-top: 4vw;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+#content h4{
+    font-size: 1vw;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(243, 229, 253);
+    padding: 0.5vw 0.9vw;
+    width: fit-content;
+    color: rgb(91, 91, 103);
+    border-radius: 50px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#content h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 4vw;
+    padding-top: 2.5vw;
+}
+#content h3{
+    font-weight: 500;
+    margin: 1.5vw;
+    font-size: 1.2vw;
+    background-color: rgb(249, 230, 192);
+    padding: 0.2vw 0; 
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#content button{
+    color: #F8F7F4;
+    background-color: rgb(18, 19, 48);
+    padding: 1vw 1.5vw;
+    border-radius: 50px;
+    font-size: 0.8vw;
+    font-weight: 700;
+    border: none;
+    margin-bottom: 2vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+#down{
+    height: 25vw;
+    /* padding: 1vw;
+    padding-left: 2vw; */
+    width: 100%;
+    /* background-color: rgb(67, 67, 140); */
+    /* first method:  */
+    /* display: flex;
+    flex-wrap: nowrap;
+    gap: 3vw;
+    overflow-x: auto;
+    overflow-y: hidden; */
+
+    /* Second method: */
+    /* display: inline-block; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#bottom{
+    padding: 1vw 0;
+    padding-left: 2.8vw;
+    height: 100%;
+    width: 100%;
+    margin-right: 5px;
+    /* background-color: rgb(107, 51, 87); */
+    display: inline-block;
+    animation-name: anime;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#down::-webkit-scrollbar{
+    display: none;
+}
+.elem{
+    display: inline-block;
+    flex-shrink: 0;
+    height: 100%;
+    width: 17vw;
+    background-color: rgb(64, 70, 68);
+    margin-right: 2.8vw;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes anime {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 9px));
+    }
+}
+
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.elem video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.elem .text-bottom{
+    height: 25%;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    padding: 1.2vw;
+}
+.text-bottom h6{
+    color: white;
+    font-size: 1.2vw;
+}
+
+
+#page2{
+    height: 100%;
+    width: 100%;
+    /* background-color: pink; */
+    margin-top: 60px;
+    position: relative;
+    padding: 2vw;
+}
+#page2 h1{
+    text-align: center;
+    padding: 2vw;
+    font-size: 3vw;
+    font-weight: 500;
+}
+.box{
+    height: 15vw;
+    width: 20vw;
+    background-color: aqua;
+    border-radius: 10px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 1.8vw;
+    position: relative;
+}
+.box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.box video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.box-bottom{
+    height: 40%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(transparent,rgba(0, 0, 0, 0.492));
+    bottom: -40%;
+    transition: all ease 0.4s;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.box-bottom i{
+    background-color: white;
+    padding: 0.5vw 0.5vw;
+    color: black;
+    font-size: 1vw;
+    border-radius: 50%;
+}
+.box-bottom h1{ 
+    font-size: 1vw;
+}
+.box:hover .box-bottom{
+    bottom: 0%;
+}
+.box:hover{
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.415)
+}
+
+@media (max-width:600px) {
+    #page1{
+    height: 35%;
+}
+#nav{
+    height: 8vw;
+    width: 100%;
+    padding: 0 2vw;
+}
+#nav-part1{
+    width: 40%;
+}
+#nav-part1 h4{
+    font-size: 1.2vw;
+}
+#nav-part2{
+    width: 40%;
+}
+#nav-part2 button{
+    font-size: 1.4vw;
+}
+
+
+#content h4{
+    font-size: 1.7vw;
+}
+#content h1{
+    letter-spacing: 1.5px;
+    font-size: 4.5vw;
+}
+#content h3{
+    font-size: 1.5vw;
+}
+#content button{
+    font-size: 1.3vw;
+}
+
+
+.elem .text-bottom{
+    height: 35%;
+    padding: 2.5vw;
+}
+.text-bottom h6{
+    font-size: 1.4vw;
+}
+
+
+#page2{
+    height: 50%;
+}
+#page2 h1{
+    margin-top: 40px;
+    font-size: 4vw;
+}
+.box{
+    height: 20vw;
+    width: 27.8vw;
+    background-color: aqua;
+    border-radius: 10px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 1.8vw;
+    position: relative;
+}
+
+.box-bottom{
+    height: 40%;
+    width: 100%;
+    /* position: absolute; */
+    bottom: 0;
+    background: linear-gradient(transparent,rgba(0, 0, 0, 0.492));
+    bottom: -40%;
+    transition: all ease 0.4s;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.box-bottom i{
+    font-size: 2.2vw;
+}
+.box-bottom h1{ 
+    font-size: 1vw;
+}
+}

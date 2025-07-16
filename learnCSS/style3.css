@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: black;
+    padding: 5vw;
+}
+button{
+    padding: 10px 20px;
+    background-color: transparent;
+    /* mix-blend-mode: difference; */
+    border: 2px solid cornflowerblue;
+    color: cornflowerblue;
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    transition: all linear 0.5s;
+    /* aur slow krne ke liye yahan bhi lga diya */
+    overflow: hidden;  /* jo bhi overflow ho woh hide ho jaye */
+}
+button::after{
+    content: "";
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: cornflowerblue;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all linear 0.5s;
+    /* jb hover krenge toh 0.5 sec mein linearly poora box cover kr leta hai */
+    z-index: -1;
+    /* transition se poora button ya div cover ho rha hai isliye z index ka use kiya */
+}
+button:hover::after{
+    /* width: 100%; */
+    transform: translate(-50%, -50%) scale(4);
+
+}
+button:hover{
+    color: black;
+}

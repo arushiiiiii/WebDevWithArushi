@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#box1{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(239, 111, 175);
+    position: relative;
+    animation-name: box-anime;   
+    /* animation name and duration is a must include thing. */
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;    /* isse jo animation ki final properties hoti hai wahi pr woh rehta hai end mein.(Agar forward hai toh) */
+    animation-iteration-count: infinite;    /* kitni baar chalega  */
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+    /* humare animation kab fast hoga kb slow yeh control krta hai. */
+}
+#box2{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(143, 128, 229);
+    position: relative;
+    animation-name: box-anime;   
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forward;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+/* you can choose any name */
+@keyframes box-anime {
+    from{
+        left: 0;
+    }
+    to{
+        left: 70%;
+    }
+}

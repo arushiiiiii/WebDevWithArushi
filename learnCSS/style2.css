@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+h1{
+    font-size: 100px;
+    color: rgb(2, 90, 90);
+}
+
+h1::after{
+    /* agar mai element ke baad mein kuch likhna chahti hu */
+    /* yeh sirf display hota hai, ise select nhi kr skte */
+    content: " cuties";   /* content likhna zaruri hai */
+    color: rgb(3, 30, 30);
+    font-size: 70px;
+}
+h1::before{
+    content: "🔮 ";
+    /* hum chahe toh jo original properties hai unhe change kr skte hai wrna phir same bhi rehne de skte hai. */
+}
+
+#box{
+    height: 200px;
+    width: 200px;
+    background-color: aquamarine;
+}
+#box::after{
+    content: "?";
+}
+#box::before{
+    content: "hihi ";
+}
